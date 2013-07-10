@@ -3,14 +3,16 @@
 myStore3 is using the Spree Ecommerce framework
 and Spree Gem packages
 
-== Install the rerequisite requirements:
+== Install the prerequisite requirements:
 * Installing nokogiri gem on Ubuntu:
-  $ sudo apt-get install libxslt-dev libxml2-dev
-  $ sudo gem install nokogiri
+
+    $ sudo apt-get install libxslt-dev libxml2-dev
+    $ sudo gem install nokogiri
 
 * Installing mysql2 gem on Ubuntu:
-  $ sudo apt-get install libmysqlclient-dev
-  $ gem install mysql2
+
+    $ sudo apt-get install libmysqlclient-dev
+    $ gem install mysql2
 
 
 == Getting Started
