@@ -272,6 +272,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
+    libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -331,6 +332,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     recaptcha (0.3.5)
+    ref (1.0.5)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -354,6 +356,9 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     state_machine (1.2.0)
     stringex (1.5.1)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.18.1)
     tilt (1.4.1)
     tinymce-rails (4.0.1)
@@ -404,5 +409,6 @@ DEPENDENCIES
   spree_i18n!
   spree_simple_blog!
   spree_wishlist!
+  therubyracer
   tinymce-rails
   uglifier (>= 1.0.3)
