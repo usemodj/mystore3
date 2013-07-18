@@ -11,3 +11,5 @@
 
 //= require_tree .
 //= require admin/spree_essentials
+// require admin/spree_active_sale
+

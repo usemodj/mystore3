@@ -74,7 +74,7 @@ gem "spree_comments", github: 'spree/spree_comments'
 #gem 'spree_awesome_blog', :github => 'joshnuss/spree-awesome-blog', :branch => 'master'
 #gem 'spree_simple_blog'
 #gem 'spree_simple_blog', :git => 'https://github.com/TiagoDaniel/spree_simple_blog.git', :branch => 'master'
-gem 'spree_simple_blog', :github => 'usemodj/spree_simple_blog', :branch => 'master'
+#gem 'spree_simple_blog', :github => 'usemodj/spree_simple_blog', :branch => 'master'
 
 #gem 'spree_essentials', :git => 'https://github.com/citrus/spree_essentials.git'
 gem 'spree_essentials', :git => 'https://github.com/usemodj/spree_essentials.git'
@@ -85,3 +85,17 @@ gem 'spree_essential_cms', :git => 'https://github.com/usemodj/spree_essential_c
 
 #gem "spree_pages", :git => 'git://github.com/sebastyuiop/spree_pages.git'
 #gem "spree_pages", :git => 'git://github.com/usemodj/spree_pages.git'
+
+#gem 'spree_active_sale' , :git => 'git://github.com/usemodj/spree_active_sale.git'
+
+#gem 'spree_contact_us', :git => 'https://github.com/jdutil/spree_contact_us.git'
+gem 'spree_contact_us', :git => 'https://github.com/usemodj/spree_contact_us.git'
+
+gem 'prawn', :git => 'https://github.com/prawnpdf/prawn.git', :branch => 'master'
+#gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git'
+gem 'spree_print_invoice' , :git => 'git://github.com/usemodj/spree_print_invoice.git', :branch => 'master'
+
+#gem 'order_export', :git => 'https://github.com/3months/spree-order-export.git'
+gem 'spree_better_breadcrumbs', :git => 'https://github.com/usemodj/spree_better_breadcrumbs.git'
+
+gem 'spree_essential_blog', :git => 'git://github.com/usemodj/spree_essential_blog.git', :branch => 'master'

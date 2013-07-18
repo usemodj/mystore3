@@ -11,26 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708003223) do
-
-  create_table "post_products", :force => true do |t|
-    t.integer  "post_id"
-    t.integer  "product_id"
-    t.integer  "relevance"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "slug"
-    t.string   "title"
-    t.text     "summary"
-    t.text     "body"
-    t.boolean  "live"
-    t.datetime "posted_at"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130717095116) do
 
   create_table "question_categories", :force => true do |t|
     t.string   "name"
@@ -136,8 +117,16 @@ ActiveRecord::Schema.define(:version => 20130708003223) do
     t.string   "bank_branch"
     t.string   "account_owner"
     t.string   "account_number"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "payment_method_id"
+  end
+
+  create_table "spree_blogs", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_calculators", :force => true do |t|
@@ -391,6 +380,37 @@ ActiveRecord::Schema.define(:version => 20130708003223) do
 
   add_index "spree_payments", ["order_id"], :name => "index_spree_payments_on_order_id"
 
+  create_table "spree_post_categories", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_post_categories_posts", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "post_category_id"
+  end
+
+  create_table "spree_post_products", :force => true do |t|
+    t.integer "post_id"
+    t.integer "product_id"
+    t.integer "position"
+  end
+
+  create_table "spree_posts", :force => true do |t|
+    t.string   "title"
+    t.string   "path"
+    t.string   "teaser"
+    t.datetime "posted_at"
+    t.text     "body"
+    t.string   "author"
+    t.boolean  "live",       :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "blog_id"
+  end
+
   create_table "spree_preferences", :force => true do |t|
     t.text     "value"
     t.string   "key"
@@ -588,6 +608,32 @@ ActiveRecord::Schema.define(:version => 20130708003223) do
 
   add_index "spree_roles_users", ["role_id"], :name => "index_spree_roles_users_on_role_id"
   add_index "spree_roles_users", ["user_id"], :name => "index_spree_roles_users_on_user_id"
+
+  create_table "spree_sale_events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "permalink"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean  "is_active",      :default => true
+    t.boolean  "is_hidden",      :default => false
+    t.boolean  "is_permanent",   :default => false
+    t.integer  "eventable_id"
+    t.string   "eventable_type"
+    t.integer  "active_sale_id"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "type"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "position",       :default => 0
+    t.integer  "discount"
+  end
+
+  add_index "spree_sale_events", ["active_sale_id"], :name => "index_active_sale_on_active_sale_id"
+  add_index "spree_sale_events", ["parent_id"], :name => "index_active_sale_on_parent_id"
+  add_index "spree_sale_events", ["permalink"], :name => "index_active_sale_on_permalink"
 
   create_table "spree_shipments", :force => true do |t|
     t.string   "tracking"
@@ -906,6 +952,23 @@ ActiveRecord::Schema.define(:version => 20130708003223) do
     t.integer  "zone_members_count", :default => 0
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+  end
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context"
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
   end
 
 end

@@ -11,3 +11,5 @@
 
 //= require_tree .
 //= require store/spree_wishlist
+// require store/spree_active_sale
+//= require store/spree_contact_us
