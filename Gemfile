@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 #gem 'sqlite3'
 gem 'mysql2'
 gem 'therubyracer'
-
+gem 'rails-i18n'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -49,8 +49,9 @@ gem 'spree', :github => 'usemodj/spree', :branch => 'master'
 
 #gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
 #gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git' #, :branch => '2-0-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git'#, :branch => '2-0-stable'
-gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :branch => 'master'
+#gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git'#, :branch => '2-0-stable'
+#gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git', :branch => 'master'
+gem 'spree_auth_devise', :git => 'https://github.com/usemodj/spree_auth_devise.git'#, 
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git'
 
 #gem 'spree_bank_transfer' # rubygems.org
@@ -80,7 +81,7 @@ gem "spree_comments", github: 'spree/spree_comments'
 gem 'spree_essentials', :git => 'https://github.com/usemodj/spree_essentials.git'
 
 #gem 'spree_essential_cms', :git => 'https://github.com/citrus/spree_essential_cms.git'
-gem 'spree_essential_cms', :git => 'https://github.com/usemodj/spree_essential_cms.git'
+#gem 'spree_essential_cms', :git => 'https://github.com/usemodj/spree_essential_cms.git'
 #gem 'spree_essential_cms', :git => 'https://github.com/slingerbv/spree_essential_cms.git'
 
 #gem "spree_pages", :git => 'git://github.com/sebastyuiop/spree_pages.git'
@@ -99,3 +100,7 @@ gem 'spree_print_invoice' , :git => 'git://github.com/usemodj/spree_print_invoic
 gem 'spree_better_breadcrumbs', :git => 'https://github.com/usemodj/spree_better_breadcrumbs.git'
 
 gem 'spree_essential_blog', :git => 'git://github.com/usemodj/spree_essential_blog.git', :branch => 'master'
+
+#gem "spree_address_book", :git => "git://github.com/romul/spree_address_book.git"
+gem "spree_address_book", :git => "git://github.com/usemodj/spree_address_book.git"
+gem 'spree_slider', :git => 'https://github.com/usemodj/spree_slider.git'

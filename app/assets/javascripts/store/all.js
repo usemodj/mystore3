@@ -13,3 +13,8 @@
 //= require store/spree_wishlist
 // require store/spree_active_sale
 //= require store/spree_contact_us
+//= require store/spree_address_book
+//= require js/jquery.anythingslider
+//= require js/jquery.anythingslider.fx
+//= require js/jquery.anythingslider.video
+//= require jquery.nivo.slider.pack.js

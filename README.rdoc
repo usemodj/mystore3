@@ -36,3 +36,7 @@ and Spree Gem packages
     "Spree Admin pages" 
     => user/passwd=spree@example.com/spree123     
 
+------------
+* locale setting:
+  http://localhost:3000/locale/set?locale=ko
+  

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130717095116) do
+ActiveRecord::Schema.define(:version => 20130726071716) do
 
   create_table "question_categories", :force => true do |t|
     t.string   "name"
@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
     t.datetime "updated_at",                      :null => false
   end
 
+  create_table "spree_active_sales", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "type",       :default => "Spree::ActiveSale"
+  end
+
   create_table "spree_addresses", :force => true do |t|
     t.string   "firstname"
     t.string   "lastname"
@@ -72,6 +79,8 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
     t.integer  "country_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "user_id"
+    t.datetime "deleted_at"
   end
 
   add_index "spree_addresses", ["firstname"], :name => "index_addresses_on_firstname"
@@ -331,6 +340,7 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
     t.string   "currency"
     t.string   "last_ip_address"
     t.boolean  "payment_confirmed"
+    t.string   "bank_account_id",      :limit => 45
   end
 
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
@@ -353,12 +363,13 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"
     t.string   "name"
+    t.integer  "bank_account_id"
     t.text     "description"
-    t.boolean  "active",      :default => true
-    t.string   "environment", :default => "development"
+    t.boolean  "active",          :default => true
+    t.string   "environment",     :default => "development"
     t.datetime "deleted_at"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
     t.string   "display_on"
   end
 
@@ -628,7 +639,6 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "position",       :default => 0
-    t.integer  "discount"
   end
 
   add_index "spree_sale_events", ["active_sale_id"], :name => "index_active_sale_on_active_sale_id"
@@ -701,6 +711,21 @@ ActiveRecord::Schema.define(:version => 20130717095116) do
     t.string   "payment_type"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "spree_slides", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.string   "link_url"
+    t.boolean  "published"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "position",           :default => 0, :null => false
+    t.integer  "product_id"
   end
 
   create_table "spree_state_changes", :force => true do |t|

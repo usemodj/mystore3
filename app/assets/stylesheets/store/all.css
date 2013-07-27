@@ -11,7 +11,11 @@
  *= require store/spree_wishlist
  *= require store/spree_grid_faq
  * require store/spree_active_sale
-*= require store/spree_essential_blog
-*= require store/spree_essential_blog
-*= require store/spree_essential_blog
+ *= require store/spree_essential_blog
+  *= require store/spree_address_book
+ *= require css/anythingslider
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */

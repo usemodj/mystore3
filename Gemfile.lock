@@ -10,22 +10,11 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_email_to_friend.git
-  revision: 4e5db118825a1451401c4cde33fd3a46052e3925
+  revision: a0f19ec8f5c840f9f8e34fe7c536bfd4a11b3423
   specs:
     spree_email_to_friend (1.3)
       recaptcha (>= 0.3.1)
       spree_core (~> 2.1.0.beta)
-
-GIT
-  remote: git://github.com/spree/spree_i18n.git
-  revision: 84a2981682073ecee2ddceafc0be83070a16c3b2
-  branch: master
-  specs:
-    spree_i18n (3.0.0)
-      globalize3 (~> 0.3.0)
-      i18n (~> 0.6.1)
-      rails-i18n (~> 0.7.3)
-      spree_core (~> 2.0)
 
 GIT
   remote: git://github.com/spree/spree_wishlist.git
@@ -45,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/usemodj/spree.git
-  revision: d3016c1d4c91675c8d98b4a49ce625c77697c096
+  revision: f50937b0c90d0829f1e9575ea34dd1eac55e6168
   branch: master
   specs:
     spree (2.1.0.beta)
@@ -101,6 +90,14 @@ GIT
       spree_core (= 2.1.0.beta)
 
 GIT
+  remote: git://github.com/usemodj/spree_address_book.git
+  revision: 728d504055664ad721e6336b335700c974d06216
+  specs:
+    spree_address_book (1.3.0)
+      spree_auth_devise
+      spree_core (>= 1.2)
+
+GIT
   remote: git://github.com/usemodj/spree_ajax_add_to_cart.git
   revision: 26014b7d7fd125f5e3d9aea30ace80c2f9601b4b
   specs:
@@ -109,7 +106,7 @@ GIT
 
 GIT
   remote: git://github.com/usemodj/spree_essential_blog.git
-  revision: 051698935ca8bc0cb0711160249363225eb7603a
+  revision: 60e23772ac075610849599fbca10e94be9247656
   branch: master
   specs:
     spree_essential_blog (0.1.0)
@@ -118,7 +115,7 @@ GIT
 
 GIT
   remote: git://github.com/usemodj/spree_grid_faq.git
-  revision: ac6a2b7ec40f1efd595d2ec808eae4ed51a53b15
+  revision: 074c29c123429b908b7d262c0163caf9648e616e
   branch: master
   specs:
     spree_grid_faq (0.1.0)
@@ -135,13 +132,6 @@ GIT
       spree_core
 
 GIT
-  remote: https://github.com/jdutil/spree_contact_us
-  revision: 3b99dc34a15b2491aba7fc5c42bff59290971b90
-  specs:
-    spree_contact_us (2.0.0)
-      spree_core (~> 2.1.0.beta)
-
-GIT
   remote: https://github.com/prawnpdf/prawn.git
   revision: 8028ca0cd2aae8c72df9fc4bf16388948423bcb2
   branch: master
@@ -153,8 +143,16 @@ GIT
       ttfunk (~> 1.0.3)
 
 GIT
-  remote: https://github.com/spree/spree_auth_devise.git
-  revision: 6523c2ab183e7a8569176002b84383e5350b55ca
+  remote: https://github.com/spree/spree_gateway.git
+  revision: cf281578359ac51aa8219c179f53ba798d568870
+  specs:
+    spree_gateway (2.1.0.beta)
+      savon (~> 1.2)
+      spree_core (~> 2.0)
+
+GIT
+  remote: https://github.com/usemodj/spree_auth_devise.git
+  revision: 2421a2d72f6be556a30a2797eed480de93840d60
   specs:
     spree_auth_devise (2.1.0)
       cancan (~> 1.6.7)
@@ -165,14 +163,6 @@ GIT
       spree_frontend (~> 2.1.0.beta)
 
 GIT
-  remote: https://github.com/spree/spree_gateway.git
-  revision: cf281578359ac51aa8219c179f53ba798d568870
-  specs:
-    spree_gateway (2.1.0.beta)
-      savon (~> 1.2)
-      spree_core (~> 2.0)
-
-GIT
   remote: https://github.com/usemodj/spree_better_breadcrumbs.git
   revision: e7c4366a337efab6375947429bf7cc8b82a9b785
   specs:
@@ -180,11 +170,11 @@ GIT
       spree_core
 
 GIT
-  remote: https://github.com/usemodj/spree_essential_cms.git
-  revision: 3151c74f46c954b6211c6d5335b0172bd35c0bd6
+  remote: https://github.com/usemodj/spree_contact_us.git
+  revision: 5fe506738039952f245dc3dff547f85dc0cda721
   specs:
-    spree_essential_cms (0.4.0)
-      spree_essentials
+    spree_contact_us (2.0.0)
+      spree_core (~> 2.1.0.beta)
 
 GIT
   remote: https://github.com/usemodj/spree_essentials.git
@@ -192,6 +182,13 @@ GIT
   specs:
     spree_essentials (0.5.0)
       rdiscount
+      spree_core
+
+GIT
+  remote: https://github.com/usemodj/spree_slider.git
+  revision: 6dd625a325ccf9da0827816bb3d1e73d3561804c
+  specs:
+    spree_slider (1.2.0)
       spree_core
 
 GEM
@@ -281,10 +278,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffaker (1.16.2)
-    globalize3 (0.3.0)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      paper_trail (~> 2)
     gyoku (0.4.6)
       builder (>= 2.1.2)
     haml (4.0.3)
@@ -325,9 +318,6 @@ GEM
     nokogiri (1.5.10)
     nori (1.1.5)
     orm_adapter (0.4.0)
-    paper_trail (2.7.2)
-      activerecord (~> 3.0)
-      railties (~> 3.0)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -408,7 +398,7 @@ GEM
       ref
     thor (0.18.1)
     tilt (1.4.1)
-    tinymce-rails (4.0.1)
+    tinymce-rails (4.0.2)
       railties (>= 3.1.1)
     treetop (1.4.14)
       polyglot
@@ -444,8 +434,10 @@ DEPENDENCIES
   mysql2
   prawn!
   rails (= 3.2.13)
+  rails-i18n
   sass-rails (~> 3.2.3)
   spree!
+  spree_address_book!
   spree_ajax_add_to_cart!
   spree_auth_devise!
   spree_bank_transfer!
@@ -454,12 +446,11 @@ DEPENDENCIES
   spree_contact_us!
   spree_email_to_friend!
   spree_essential_blog!
-  spree_essential_cms!
   spree_essentials!
   spree_gateway!
   spree_grid_faq!
-  spree_i18n!
   spree_print_invoice!
+  spree_slider!
   spree_wishlist!
   therubyracer
   tinymce-rails
