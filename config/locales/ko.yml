@@ -2,6 +2,19 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ko:
+  activemodel:
+    attributes:
+      spree/contact_us/contact:
+        name: "이름"
+        email: "이메일"
+        message: "메시지"
+        subject: "제목"
+  contact_us: "Contact Us"
+  sent_by_contact_form: "Sent by contact form from %{email}"
+  sent_by_name: "Sent by %{name} from %{email}"
+  subject: "Contact Us message from %{email}"
+  submit: " 전 송 "
+
   activerecord:
     errors:
         messages:
@@ -9,7 +22,7 @@ ko:
     attributes: 
       spree/address:
         address1: Address
-        address2: Address (contd.)
+        address2: Address (cont'd)
         city: City
         country: Country
         firstname: First Name
@@ -244,6 +257,9 @@ ko:
       not_locked: 
       not_saved: 
   spree:
+    contact_us:
+      notices:
+        success: "Contact email was successfully sent."
     abbreviation: 생략
     account: 계정
     account_updated: 계정 정보가 수정되었음!
@@ -892,8 +908,8 @@ ko:
     say_no: 'No'
     say_yes: 'Yes'
     scope: 스코프
-    search: 검색
-    search_results: ! '''%{keywords}''의 검색 결과'
+    search: '검색'
+    search_results: ! '"%{keywords}"의 검색 결과'
     searching: 검색중
     secure_connection_type: 
     security_settings: Security Settings
@@ -984,7 +1000,7 @@ ko:
     stop: 끝
     store: 상점
     street_address: Street 주소
-    street_address_2: Street 주소 (cont'd)
+    street_address_2: Street 주소 (계속)
     subtotal: 
     subtract: 
     successfully_created: ! '%{resource} has been successfully created!'
@@ -1071,21 +1087,3 @@ ko:
     zipcode: 우편번호
     zone: 지역
     zones: 지역 
-
-  activemodel:
-    attributes:
-      spree/contact_us/contact:
-        name: "이름"
-        email: "이메일"
-        message: "메시지"
-        subject: "제목"
-  contact_us: "Contact Us"
-  sent_by_contact_form: "Sent by contact form from %{email}"
-  sent_by_name: "Sent by %{name} from %{email}"
-  subject: "Contact Us message from %{email}"
-  submit: " 전 송 "
-  spree:
-    contact_us:
-      notices:
-        success: "Contact email was successfully sent."
-    
